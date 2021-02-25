@@ -7,7 +7,7 @@
 ### Steps to start
 
 - open mysql and create todo db  
-`CREATE DATABASE IF NOT EXISTS todo;`
+`CREATE DATABASE IF NOT EXISTS todo_task;`
 - add mysql configurations to `.env` file
 
 - run migrations `php artisan migrate`
