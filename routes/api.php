@@ -20,5 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => '/v1'], function(){
     Route::post('categories', 'App\Http\Controllers\CategoryController@store');
+
+    Route::post('todo-list', 'App\Http\Controllers\TODOController@store');
 });
 
