@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TODO extends Model
+class ItemActions extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'category_id',
-        'description',
-        'status',
-        'time_spent',
+        'item_id',
+        'start_time',
+        'stop_time',
+        'tracking',
     ];
 
-    protected $table = 'todo';
+    protected $table = 'item_actions';
 }

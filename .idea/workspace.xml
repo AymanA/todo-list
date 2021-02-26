@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:track-item" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cf4a1eee-d6fc-4855-8981-f91f1ed117e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/to-do-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/to-do-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_25_231252_create_todo-item-tracking_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="99d1a159-2178-4aef-a53b-13a8d23a4b7d" name="add tracking endpoints and handle spent time calculations" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/ItemActions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TODOController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TODOController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/TODO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TODO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
+    <list id="8bbf83e9-3646-4ed8-8334-2caac2539d94" name="create todo item" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +36,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="readme-edits" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +51,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="track-item" />
+                    <option name="lastUsedInstant" value="1614294762" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="development" />
                     <option name="lastUsedInstant" value="1614291868" />
@@ -45,6 +71,19 @@
         </option>
       </RecentBranches>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="17" changelist="cf4a1eee-d6fc-4855-8981-f91f1ed117e2" />
+        <range start1="3" end1="12" start2="18" end2="20" changelist="99d1a159-2178-4aef-a53b-13a8d23a4b7d" />
+        <range start1="20" end1="20" start2="28" end2="31" changelist="cf4a1eee-d6fc-4855-8981-f91f1ed117e2" />
+        <range start1="31" end1="31" start2="42" end2="46" changelist="cf4a1eee-d6fc-4855-8981-f91f1ed117e2" />
+        <range start1="167" end1="167" start2="182" end2="183" changelist="cf4a1eee-d6fc-4855-8981-f91f1ed117e2" />
+        <range start1="169" end1="169" start2="185" end2="226" changelist="cf4a1eee-d6fc-4855-8981-f91f1ed117e2" />
+        <range start1="171" end1="172" start2="228" end2="228" changelist="cf4a1eee-d6fc-4855-8981-f91f1ed117e2" />
+      </ranges>
+    </file>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -165,7 +204,53 @@
     <option name="autoscrollToSource" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="track-item" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="100" y="128" width="1480" height="822" key="DiffContextDialog" timestamp="1614294647942">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="100" y="128" width="1480" height="822" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1614294647942" />
+    <state x="692" y="457" key="VCS.ChangelistChooser" timestamp="1614369423774">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="692" y="457" key="VCS.ChangelistChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1614369423774" />
+    <state x="505" y="254" width="670" height="676" key="search.everywhere.popup" timestamp="1614367068818">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="254" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1614367068818" />
   </component>
 </project>

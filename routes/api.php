@@ -22,5 +22,8 @@ Route::group(['prefix' => '/v1'], function(){
     Route::post('categories', 'App\Http\Controllers\CategoryController@store');
 
     Route::post('todo-list', 'App\Http\Controllers\TODOController@store');
+
+    Route::post('track-item/{item_id}', 'App\Http\Controllers\TODOController@trackItem');
+    Route::post('stop-item/{item_id}', 'App\Http\Controllers\TODOController@stopItem');
 });
 
