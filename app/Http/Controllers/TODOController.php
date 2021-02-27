@@ -78,9 +78,9 @@ class TODOController extends Controller
 
     public function trackItem(Request $request, $item_id)
     {
-        $exist = $this->checkItemExist($item_id);
+        $itemExist = TODO::where('id', $item_id)->first();
 
-        if (!$exist)
+        if (!$itemExist)
             return response()->json('item not found', Response::HTTP_NOT_FOUND);
 
         $item_is_active = ItemActions::where('item_id', $item_id)->where('tracking', 1)->first();
@@ -97,6 +97,9 @@ class TODOController extends Controller
         ItemActions::create([
             'item_id' => $item_id
         ]);
+        $itemExist->status = StatusLookup::INPROGRESS;
+        $itemExist->save();
+
         return response()->json('Item tracking started successfully', Response::HTTP_OK);
     }
 
@@ -117,6 +120,7 @@ class TODOController extends Controller
                 $spent_time = $this->calculateSpentTimeForItem($item_is_active->id);
 
                 $itemExist->time_spent += $spent_time;
+                $itemExist->status = StatusLookup::DONE;
                 $itemExist->save();
 
                 return response()->json('Item tracking stopped successfully', Response::HTTP_OK);
@@ -131,16 +135,6 @@ class TODOController extends Controller
         }
 
 
-    }
-
-    public function checkItemExist($item_id)
-    {
-        $itemExist = TODO::where('id', $item_id)->first();
-        if (!$itemExist) {
-            return false;
-        }
-
-        return true;
     }
 
     public function calculateSpentTimeForItem($action_item_id){
