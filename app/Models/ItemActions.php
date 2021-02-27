@@ -13,6 +13,7 @@ class ItemActions extends Model
         'start_time',
         'stop_time',
         'tracking',
+        'time_spent',
     ];
 
     protected $table = 'item_actions';

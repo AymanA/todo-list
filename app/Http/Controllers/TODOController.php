@@ -78,9 +78,9 @@ class TODOController extends Controller
 
     public function trackItem(Request $request, $item_id)
     {
-        $itemExist = TODO::where('id', $item_id)->first();
+        $item_exist = TODO::where('id', $item_id)->first();
 
-        if (!$itemExist)
+        if (!$item_exist)
             return response()->json('item not found', Response::HTTP_NOT_FOUND);
 
         $item_is_active = ItemActions::where('item_id', $item_id)->where('tracking', 1)->first();
@@ -97,17 +97,17 @@ class TODOController extends Controller
         ItemActions::create([
             'item_id' => $item_id
         ]);
-        $itemExist->status = StatusLookup::INPROGRESS;
-        $itemExist->save();
+        $item_exist->status = StatusLookup::INPROGRESS;
+        $item_exist->save();
 
         return response()->json('Item tracking started successfully', Response::HTTP_OK);
     }
 
     public function stopItem(Request $request, $item_id)
     {
-        $itemExist = TODO::where('id', $item_id)->first();
+        $item_exist = TODO::where('id', $item_id)->first();
 
-        if (!$itemExist)
+        if (!$item_exist)
             return response()->json('item not found', Response::HTTP_NOT_FOUND);
 
         $item_is_active = ItemActions::where('item_id', $item_id)->where('tracking', 1)->first();
@@ -119,9 +119,9 @@ class TODOController extends Controller
 
                 $spent_time = $this->calculateSpentTimeForItem($item_is_active->id);
 
-                $itemExist->time_spent += $spent_time;
-                $itemExist->status = StatusLookup::DONE;
-                $itemExist->save();
+                $item_exist->time_spent += $spent_time;
+                $item_exist->status = StatusLookup::DONE;
+                $item_exist->save();
 
                 return response()->json('Item tracking stopped successfully', Response::HTTP_OK);
             } catch (Exception $e){
@@ -144,6 +144,8 @@ class TODOController extends Controller
 
         $seconds_diff = $stop_time - $start_time;
 
+        $updated_action->time_spent = $seconds_diff;
+        $updated_action->save();
         return $seconds_diff;
     }
 }

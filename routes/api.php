@@ -25,5 +25,9 @@ Route::group(['prefix' => '/v1'], function(){
 
     Route::post('track-item/{item_id}', 'App\Http\Controllers\TODOController@trackItem');
     Route::post('stop-item/{item_id}', 'App\Http\Controllers\TODOController@stopItem');
+
+    Route::get('report1', 'App\Http\Controllers\ReportController@getReport1Result');
+    Route::get('report2', 'App\Http\Controllers\ReportController@getReport2Result');
+
 });
 
